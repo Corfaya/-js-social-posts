@@ -56,6 +56,10 @@ const posts = [
     }
 ];
 
+// const d = new Date();
+// let month = d.getMonth() + 1;
+// console.log(month)
+
 const container = document.getElementById("container")
 
 posts.forEach((el) => {
@@ -96,12 +100,13 @@ posts.forEach((el) => {
 
 //Milestone 2
 const likeBtn = document.querySelectorAll(".js-like-button")
-const counter = document.querySelectorAll(".js-likes-counter")
-
+console.log(likeBtn)
 let arr = []
 
-likeBtn.forEach((el) => {
-    el.addEventListener("click", function() {
-        el.classList.add("like-button--liked")
-    })
-})
+likeBtn.forEach(el => {
+    el.addEventListener('click', function () {
+        const data_id = el.getAttribute("data-postid"); //returning data-postid's value
+        console.log(data_id)
+        const counter = document.getElementById(`like-counter-${data_id}`);
+    });
+});
