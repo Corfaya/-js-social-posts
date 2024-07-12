@@ -108,5 +108,10 @@ likeBtn.forEach(el => {
         const data_id = el.getAttribute("data-postid"); //returning data-postid's value
         console.log(data_id)
         const counter = document.getElementById(`like-counter-${data_id}`);
+        if (!arr.includes(data_id)) {
+            arr.push(data_id);
+            counter.innerText++;
+            el.classList.add("like-button--liked");
+        }
     });
 });
