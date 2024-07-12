@@ -95,4 +95,5 @@ posts.forEach((el) => {
 })
 
 //Milestone 2
-const likeBtn = document.querySelector(".like-button")
+const likeBtn = document.querySelectorAll(".like-button")
+const counter = document.querySelectorAll(".js-likes-counter")
