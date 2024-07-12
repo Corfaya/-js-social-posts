@@ -8,3 +8,9 @@ P.S. Occhio al nome della repo! Ricordatevi che deve essere js-social-posts!
 1. Formattare le date in formato italiano (gg/mm/aaaa)
 2. Gestire l'assenza dell'immagine profilo con un elemento di fallback che contiene le iniziali dell'utente (es. Luca Formicola > LF).
 3. Al click su un pulsante "Mi Piace" di un post, se abbiamo già cliccato dobbiamo decrementare il contatore e cambiare il colore del bottone.
+
+# FLOW
+(Milestone 1)
+- Recupero contenitore dal DOM
+- Effettuo un ciclo forEach dove itero tutti gli oggetti dell'array
+    - Inserisco nel container precedentemente recuperato gli elementi e il contenuto dell'HTML
