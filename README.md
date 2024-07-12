@@ -19,7 +19,8 @@ P.S. Occhio al nome della repo! Ricordatevi che deve essere js-social-posts!
 - Recupero il bottone per il like
 - Recupero il contatore dei like
 - Creo un array vuoto
-- Aggiungo un evento click sul bottone
-    - Assegnare classe .like-button--like al bottone
-    - Incremento di 1 il contatore dei like
-    - Inserisco nell'array l'id del post
+- Creo un ciclo forEach() iterando ogni pulsante
+    - Aggiungo un evento click sul bottone
+        - Assegnare classe .like-button--like al bottone
+        - Incremento di 1 il contatore dei like
+        - Inserisco nell'array l'id del post
