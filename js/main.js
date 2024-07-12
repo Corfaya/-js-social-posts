@@ -59,16 +59,17 @@ const posts = [
 const container = document.getElementById("container")
 
 posts.forEach((el) => {
-    //destrutturazione parziale
-    let {content, media, likes} = el
+    //destrutturazione
+    let {id, content, media, author, likes, created} = el
+    let {name, image} = author
     container.innerHTML += `<div class="post">
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
-                        <img class="profile-pic" src="${el.author.image}" alt="${el.author.name}">                    
+                        <img class="profile-pic" src="${image}" alt="${name}">                    
                     </div>
                     <div class="post-meta__data">
-                        <div class="post-meta__author">${el.author.name}</div>
+                        <div class="post-meta__author">${name}</div>
                         <div class="post-meta__time">4 mesi fa</div>
                     </div>                    
                 </div>
