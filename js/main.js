@@ -66,7 +66,7 @@ posts.forEach((el) => {
     //destrutturazione
     let {id, content, media, author, likes, created} = el
     let {name, image} = author
-    container.innerHTML += `<div class="post">
+    container.innerHTML += `<div id=${id} class="post">
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
@@ -103,15 +103,17 @@ const likeBtn = document.querySelectorAll(".js-like-button")
 console.log(likeBtn)
 let arr = []
 
-likeBtn.forEach(el => {
-    el.addEventListener('click', function () {
+likeBtn.forEach((el) => {
+    el.addEventListener("click", function (event) {
+        event.preventDefault();
         const data_id = el.getAttribute("data-postid"); //returning data-postid's value
         console.log(data_id)
-        const counter = document.getElementById(`like-counter-${data_id}`);
+        const counter = document.getElementById(`like-counter-${data_id}`)
+        let likes = parseInt(counter.innerText)
         if (!arr.includes(data_id)) {
-            arr.push(data_id);
-            counter.innerText++;
-            el.classList.add("like-button--liked");
+            arr.push(data_id)
+            likes.innerText + 1
+            el.classList.add("like-button--liked")
         }
     });
 });
