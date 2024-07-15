@@ -66,6 +66,11 @@ posts.forEach((el) => {
     //destrutturazione
     let {id, content, media, author, likes, created} = el
     let {name, image} = author
+    // BONUS: ita data dd-mm-yyyy
+    let split_date = created.split("-") // every string divided and added into a new array ("-" deleted)
+    console.log(split_date) //year, month, day
+    let date = `${split_date[2]}/${split_date[1]}/${split_date[0]}` // day, month, year
+
     container.innerHTML += `<div class="post">
             <div class="post__header">
                 <div class="post-meta">                    
@@ -74,7 +79,7 @@ posts.forEach((el) => {
                     </div>
                     <div class="post-meta__data">
                         <div class="post-meta__author">${name}</div>
-                        <div class="post-meta__time">4 mesi fa</div>
+                        <div class="post-meta__time">${date}</div>
                     </div>                    
                 </div>
             </div>
