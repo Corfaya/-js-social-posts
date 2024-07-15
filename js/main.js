@@ -112,7 +112,8 @@ likeBtn.forEach((el) => {
         let likes = parseInt(counter.innerText)
         if (!arr.includes(data_id)) {
             arr.push(data_id)
-            likes.innerText + 1
+            likes += 1;
+            counter.innerHTML = likes;
             el.classList.add("like-button--liked")
         }
     });
